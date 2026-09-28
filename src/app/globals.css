@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Tokens — espelham a coleção "Color" do Figma (Horizonte — Foundations) */
+@theme {
+  --color-canvas: #f7f5f1;
+  --color-surface: #ffffff;
+  --color-night: #0f1a2b; /* bg/brand */
+  --color-bronze: #a7784a; /* bg/accent · text/accent */
+  --color-sand: #e9e2d6;
+  --color-ink: #0f1a2b;
+  --color-ink-soft: #6a6f78;
+  --color-line: #e0d9cd;
+
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-24;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-canvas font-sans font-light text-ink antialiased;
+  }
+  :focus-visible {
+    @apply outline-1 outline-offset-4 outline-bronze;
+  }
+  ::selection {
+    @apply bg-bronze text-canvas;
+  }
+}
+
+@layer components {
+  /* Estilos de texto do Figma */
+  .overline {
+    @apply text-xs font-normal tracking-[0.3em] uppercase;
+  }
+  .label {
+    @apply text-[13px] font-medium tracking-[0.15em] uppercase;
+  }
+  .display-xl {
+    @apply font-display text-[clamp(3.25rem,8vw,7rem)] leading-[0.98] font-light tracking-[-0.02em];
+  }
+  .display-l {
+    @apply font-display text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.05] font-light tracking-[-0.015em];
+  }
+  .display-m {
+    @apply font-display text-[clamp(1.75rem,2.5vw,2.25rem)] leading-[1.15] font-normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
