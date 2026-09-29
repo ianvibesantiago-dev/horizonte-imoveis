@@ -2,7 +2,7 @@
 
 > Site editorial para imobiliária de luxo, com busca de imóveis funcional e animações refinadas.
 
-**🔗 Demo:** _em breve_ · **Nicho:** Imobiliário · Alto padrão
+**🔗 Demo:** [horizonte-imoveis-livid.vercel.app](https://horizonte-imoveis-livid.vercel.app) · **Nicho:** Imobiliário · Alto padrão
 
 > ⚠️ Projeto **conceitual de portfólio**. Empresa, pessoas, endereços e números são fictícios.
 
